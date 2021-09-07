@@ -1,0 +1,67 @@
+ <div class="container">
+  <div class="title">
+    <p>SPLT</p>
+    <p>TTER</p>
+  </div>
+<div class="card">
+  <div class="input">
+
+      <div class="bill-container">
+        <div class="label-wrapper">
+          <label class="inp-bill">Bill</label>
+        </div>
+        <div class="inp-warraper">
+          <input class="inp-text" type="text" name="inp_bill_value" id="inp-bill" placeholder="0.0" [(ngModel)]="inp_bill_value" >
+          <img class="img" src="assets/dollar.svg" alt="dollar-icon">
+        </div>
+      </div>
+        
+        <div class="tip-container">
+          <div class="label-wrapper">
+            <label class="inp-tip">Select Tip %</label>
+          </div>
+            <div class="btn-wrapper">
+              <div class="btn" (click)="five()">5%</div>
+              <div class="btn" (click)="ten()" >10%</div>
+              <div class="btn btn-active" (click)="fifthen()">15%</div>
+              <div class="btn" (click)="twentyFive()">25%</div>
+              <div class="btn" (click)="fifty()">50%</div>
+              <input class="inp-text " type="text" name="cust_tip" id="inp-tip" placeholder="Custom" [(ngModel)]="cust_tip">
+            </div>
+        </div>
+       
+      <div class="people-container">
+          <div class="label-wrapper">
+            <label class="inp-people">Number of People</label>
+            <div class="error-sms">can't be zero</div>
+          </div>
+          <div class="inp-warraper">
+            <input class="inp-text" type="text" name="No_people" id="inp-people" placeholder="1" [(ngModel)]="No_people">
+            <img class="img" src="assets/username.svg" alt="username-icon">
+          </div>
+      </div>
+
+</div>
+    
+  <div class="output">
+    <div class="line-wrapper">
+      <div class="line-output">
+        <div class="title-wrapper">
+          <div class="Title">Tip Amount</div>
+          <div class="desc">/person</div>
+        </div>
+        <div class="value" >${{finaltipamt}}</div>
+      </div>
+        <div class="line-output">
+          <div class="title-wrapper">
+            <div class="Title">Total</div>
+            <div class="desc">/person</div>
+          </div>
+            <div class="value">${{finaltotalamt}}</div> 
+      </div>
+    </div>
+    <div class="btn" (click)="reset()">Reset</div>    
+  </div>
+</div>
+</div>
+
